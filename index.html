@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Head todo la info que es para el navegador y no se ve, salvo el titulo. -->
+	<meta charset="UTF-8">
+	<title>Paciencia y Fe</title>
+	<!-- Estilos de Bootstrap que es codigo responsive y visual ya escrito por otro. -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<!-- codigo de colores y estilos escrito por nosotros -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Tipografia openSans -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<!-- esto es para que el navegador se de cuenta cuando estamos en un celuar o tableta-->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+<body>
+
+<header>
+	<div class="container">
+		<div class="row top">
+			<!-- en esta linea cambiamos nuestro logo. -->
+			<div class="col-md-4"><a href="#home" data-ancla="home" class="off">
+				<img src="images/Hamilton2.png" alt="" class="logo"></a></div>
+			<div class="col-md-3"></div>
+			<div class="col-md-5">
+				<ul class='botonera'>
+					<li><a href="#nosotros" data-ancla="nosotros">#Datita</a></li>
+					<li><a href="#servicios" data-ancla="servicios">#UnChongoParaCami</a></li>
+					<li><a href="#contacto" data-ancla="contacto">#Extras</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="principal vertical-centered-text" id="home">
+	<div class="col-md-8 cta"><h1>Feliz cumple Cami Sanch</h1> 
+			<h4>Esta es tu página web de cumpleaños donde encontraras muchas sorpresas </h4>
+			<p>Lo se lo se. Es épico. Ya podes cerrar la boca</p>
+<a  href="https://drive.google.com/file/d/19jyJorlnt3w5ECFVE1X0MUbuf9RnSzqU/view?usp=sharing" class="btn btn-primary orange">Ver trailer</a>
+
+
+		</div>
+</div>
+
+<div class="nosotros orange" id="nosotros">
+	<div class="container">
+		<h1>Sobre tu video</h1>
+		<p> Va a estar dividido en 4 capitulos. Se estrenan todos juntos. Esto si se va a picar.
+
+</p>
+	</div>
+</div>
+
+
+<div class="container servicios" id="servicios">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Requisitos para conquistar a Cami Sanch</h1>
+		</div>
+	</div>
+	<div class="row images">
+		<div class="col-md-3">
+			<img src="images/palta.png" alt="">
+			<h3>Palta Lover</h3>
+			<p>Corta papu. Si no te gusta la palta ni te atrevas a dirigirle la palabra a Cami.</p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/Pollo.png" alt="">
+			<h3>Fan de Friends</h3>
+			<p>Si no cachas conceptos tales como "lobster", "How you doin?" o "smelly cat" no es por ahi rey. </p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/guitarra.png" alt="">
+			<h3>Tay-Tay</h3>
+			<p>Esta lo digo por tu bien. Taylor y Cami vienen juntas. Si no te gusta Taylor Swift te vas. </p>
+		</div>
+		<div class="col-md-3">
+			<img src="images/cerebro.png" alt="">
+			<h3>IQ 150</h3>
+			<p>Cami se considera sapiosexual. Si no sos inteligente y no le aportas sabiduria sos pollo. </p>
+		</div>
+	</div>
+	
+</div>
+
+<footer>
+	<div class="container" id="contacto">
+		<div class="row">
+			<div class="col-md-12">
+					<h1>Otras cositas</h1><br><br>
+
+			</div>
+		</div>
+		<div class="row social">
+		<div class="col-3"></div>	
+					<div class="col-2">
+						<a target="_blanck" href="https://youtu.be/gPEGVKU0yTQ"><img src="images/youtube-symbol.png" alt=""></a></div>
+
+					<div class="col-2">
+						<a href="https://open.spotify.com/playlist/1UfspXMm6qjTKiy7p9mtxv" target="_blank"><img src="images/Spotify.svg" alt=""></a></div>
+
+
+					<div class="col-2">
+						<a target="_blank" href="https://www.instagram.com/p/Bh7vGFJlNA0htPi13AzUxq_KA1z8CYHfTwzM7g0/" ><img src="images/003-instagram-social-network-logo-of-photo-camera.svg" alt=""></a></div>	
+	</div>
+</footer>
+<!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script>
+	// A $( document ).ready() block.
+$(document).ready(function() {    
+$('.top a').click(function(e){
+        e.preventDefault();
+        var offset = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop:offset}, 600);
+        return false;
+    });
+
+});
+	
+</script>
+</body>
+</html>
